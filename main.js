@@ -25,6 +25,7 @@ console.log(person.name)
 
 console.log(person.age)
 
+
 //  array objects 
 
 const oddNum = [1, 3, 5, 7]
@@ -71,3 +72,23 @@ console.log(iseven2)
 // implicint conversion (Javascript automatically converts the type)
 
 // Explicit conversion (manually convert the type)
+
+// type conversions 
+console.log(2 + '5')
+console.log(true + 3)
+
+console.log(Number('25')) //this returns a number instead of a string 
+console.log(Number(true))
+console.log(Number(false))
+
+console.log(parseInt('0.55'), '------') // returns int
+
+console.log(parseFloat('5.55')) // returns a float value 
+
+console.log(String(500)) // returns a string 
+console.log((200).toString())// returns a string 
+
+
+
+
+
