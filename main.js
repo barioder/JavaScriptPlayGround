@@ -104,6 +104,11 @@ console.log (val3 === val4) // returns false they all need to be of the same typ
 
 // conditional statements
 
+const check = 20
+
+if (check > 0) {
+    console.log (check, 'Check is positive')
+}
 
 
 
