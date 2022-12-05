@@ -88,6 +88,23 @@ console.log(parseFloat('5.55')) // returns a float value
 console.log(String(500)) // returns a string 
 console.log((200).toString())// returns a string 
 
+//  Equality 
+console.log('-------EQUALITY------')
+const val1 = 'try'
+const val2 = 'try'
+
+console.log(val1 == val2)
+console.log(val1 === val2)
+
+
+const val3 = 20
+const val4 = '20'
+console.log (val3 == val4)
+console.log (val3 === val4) // returns false they all need to be of the same type 
+
+// conditional statements
+
+
 
 
 
