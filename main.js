@@ -139,3 +139,36 @@ switch(color){
         console.log('not valid input')
 
 }
+
+// loops
+// for loop
+
+for (let i = 1; i <= 5; i++){
+    console.log('This is iteration '+ i)
+
+}
+
+// while loop
+
+let z = 5
+
+while(z>0){
+    console.log('This is iteratin ' + z)
+    z--
+}
+
+// Do while loop (executes the code block before checking the condition)
+
+let r = 1
+
+do {
+    console.log('This is iteration '+ r)
+    r++
+} while(r<=3)
+
+// for ... of loop
+
+const numarray = [1, 2, 3, 4]
+for (const num of numarray) {
+    console.log('Iteraion number ', num)
+}
