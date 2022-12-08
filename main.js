@@ -103,14 +103,39 @@ console.log (val3 == val4)
 console.log (val3 === val4) // returns false they all need to be of the same type 
 
 // conditional statements
-
-const check = 20
+// if else statement 
+const check = -1
 
 if (check > 0) {
     console.log (check, 'Check is positive')
 }
+else {
+    console.log(check, 'Check is not positive')
+}
+
+// else if  statement 
+const guess = 0
+if (guess > 0){
+    console.log(guess, 'guess is positive')
+} else if (num < 0){
+    console.log(guess, 'guess is negative')
+} else {console.log(guess, 'guess is zero')}
 
 
+// switch statement 
+const color = 'blue'
 
+switch(color){
+    case 'red':
+        console.log('color is red')
+        break
+    case 'green':
+        console.log('color is green')
+        break
+    case 'blue':
+        console.log('color is blue')
+        break
+    default:
+        console.log('not valid input')
 
-
+}
