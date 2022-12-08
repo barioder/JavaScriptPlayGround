@@ -172,3 +172,37 @@ const numarray = [1, 2, 3, 4]
 for (const num of numarray) {
     console.log('Iteraion number ', num)
 }
+
+// functions 
+
+function greet(){
+    console.log('Hello world')
+}
+
+greet()
+
+function hello(username){
+    console.log('Here to say hallo '+ username)
+} 
+
+
+hello('Derrick')
+hello('Emily')
+
+function sum(a,b){
+    return a + b
+}
+
+const result = sum(5, 7)
+
+console.log('our sum is '+ result)
+
+//  arrow functions 
+
+const arrow = (a,b) => {
+    return a + b 
+}
+
+const total = arrow(12, 8)
+
+console.log('our total is '+ total)
