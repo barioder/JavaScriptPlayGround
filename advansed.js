@@ -70,3 +70,52 @@ function myName (name){
 
 myName('stevo')
 
+// "this" key word 
+
+// how to invoke a function in javacript 
+// Four ways to determine what is logged to the console by how a function is called
+
+// 1. implicit binding
+const person = {
+    name: 'Magezi',
+    sayName: function (){
+        console.log(`Saying hi to ${this.name}`)
+    }
+}
+
+person.sayName()
+
+// 2. explicit binding 
+
+const mark = {
+    finalMark: '78',
+}
+
+function result(){
+    console.log(`Your mark is ${this.finalMark}`)
+}
+
+result.call(mark)
+
+// 3. new binding
+
+function colour (choice){
+    this.colourChoice = choice
+
+}
+
+const colour1 = new colour('Red')
+const colour2 = new colour('Green')
+
+console.log(colour1.colourChoice, colour2.colourChoice)
+
+
+
+// default binding 
+
+function bookName(){
+    // notice how this.name will be evaluated to a default undefined 
+    console.log(`The book title is ${this.name}`) 
+}
+
+bookName()
