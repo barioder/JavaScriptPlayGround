@@ -62,3 +62,11 @@ const add2 = add1(2)
 const add3 = add2(4)
 
 console.log(add3)
+
+// String formatting in java
+function myName (name){
+    console.log(`Saying hi to ${name}`)
+}
+
+myName('stevo')
+
