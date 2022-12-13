@@ -119,3 +119,22 @@ function bookName(){
 }
 
 bookName()
+
+//  Prototye concept in Javascript 
+
+function join(value1, values2){
+    this.valueone = value1
+    this.valuetwo = values2
+}
+
+const value_1 = new join('ffff', 22222)
+const value_2 = new join('zzzz', 11111)
+
+// this is where we use the prototype key word
+
+join.prototype.joinedcomp = function(){
+    return this.valueone+ ' ' + this.valuetwo
+}
+
+console.log(value_1.joinedcomp())
+console.log(value_2.joinedcomp())
