@@ -138,3 +138,36 @@ join.prototype.joinedcomp = function(){
 
 console.log(value_1.joinedcomp())
 console.log(value_2.joinedcomp())
+
+// inheritence 
+// prototypal inheritance
+function human(fname, lname){
+    this.firstname = fname
+    this.lastname = lname
+
+}
+
+human.prototype.getfullNam = function(){
+    return this.firstname+ " "+ this.lastname
+}
+
+// rich man function inherites from the richman function 
+function richMan(fname, lname){
+    human.call(this, fname, lname)
+    this.isRichHuman = true
+}
+
+richMan.prototype.hasWife = function (){
+    console.log('Has a wife')
+}
+
+//objects key word delegets to another object on failed look ups
+// richMan inherites the getfullname fuction
+richMan.prototype =  Object.create(human.prototype)
+
+const don = new richMan('Magezi', 'David')
+
+console.log(don.getfullNam())
+
+// clean up in inheritance 
+richMan.prototype.constructor = richMan
