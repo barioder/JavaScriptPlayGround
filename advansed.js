@@ -169,5 +169,15 @@ const don = new richMan('Magezi', 'David')
 
 console.log(don.getfullNam())
 
+// to access the isRichHuman Value
+console.log(don.isRichHuman)
+
+
+// before clean up note the returned object
+console.log(don)
+
 // clean up in inheritance 
 richMan.prototype.constructor = richMan
+
+//  after clean up note the returned object
+console.log(don)
