@@ -183,3 +183,22 @@ richMan.prototype.constructor = richMan
 //  after clean up note the returned object
 console.log(don)
 
+//  class key word in javascript 
+
+// we can re write the prototyple inheritence code with classes 
+class Human {
+    constructor(fname1, lname1){
+        this.firstname = fname1
+        this.lastname = lname1
+    }
+
+    getfullNam (){
+        return this.firstname + ' ' +this.lastname
+    }
+
+}
+
+// creating instances of human 
+
+const classhuman1 = new Human('Bariyo', 'Derrick')
+console.log(classhuman1.getfullNam())
