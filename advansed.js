@@ -127,20 +127,21 @@ function join(value1, values2){
     this.valuetwo = values2
 }
 
-const value_1 = new join('ffff', 22222)
-const value_2 = new join('zzzz', 11111)
+const value_1 = new join('ffff', 22222) // A function used with the new key word
+const value_2 = new join('zzzz', 11111) // .. is called a constractor function
 
 // this is where we use the prototype key word
 
 join.prototype.joinedcomp = function(){
     return this.valueone+ ' ' + this.valuetwo
 }
-
+// prototye is used to share properties and methods across instances
 console.log(value_1.joinedcomp())
 console.log(value_2.joinedcomp())
 
 // inheritence 
 // prototypal inheritance
+// a richman function that inherites properties and methods from human 
 function human(fname, lname){
     this.firstname = fname
     this.lastname = lname
@@ -151,7 +152,7 @@ human.prototype.getfullNam = function(){
     return this.firstname+ " "+ this.lastname
 }
 
-// rich man function inherites from the richman function 
+// rich man function inherites from the human function 
 function richMan(fname, lname){
     human.call(this, fname, lname)
     this.isRichHuman = true
@@ -181,3 +182,4 @@ richMan.prototype.constructor = richMan
 
 //  after clean up note the returned object
 console.log(don)
+
