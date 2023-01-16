@@ -187,6 +187,7 @@ console.log(don)
 
 // we can re write the prototyple inheritence code with classes 
 class Human {
+    // Initialize properties 
     constructor(fname1, lname1){
         this.firstname = fname1
         this.lastname = lname1
@@ -202,3 +203,19 @@ class Human {
 
 const classhuman1 = new Human('Bariyo', 'Derrick')
 console.log(classhuman1.getfullNam())
+
+class RichHuman extends Human {
+    constructor(fname, lname){
+        super(fname, lname)
+        this.isRichHuman = true
+
+    }
+
+    hasWife(){
+        console.log('Has a wife')
+    }
+}
+
+const extendedhuman = new RichHuman('Magezi', 'David')
+
+console.log(extendedhuman.getfullNam())
