@@ -204,6 +204,7 @@ class Human {
 const classhuman1 = new Human('Bariyo', 'Derrick')
 console.log(classhuman1.getfullNam())
 
+// we inherite using the extends and super key words
 class RichHuman extends Human {
     constructor(fname, lname){
         super(fname, lname)
@@ -219,3 +220,43 @@ class RichHuman extends Human {
 const extendedhuman = new RichHuman('Magezi', 'David')
 
 console.log(extendedhuman.getfullNam())
+
+// implementing our own iterable and Iterator depending on how 
+// iterables and Iterators are defined 
+//  Note Java script does this internally for strings, arrays, maps and sets   
+const obj = {
+    [Symbol.iterator]: function(){
+        let step = 0
+        const iterator = {
+            next : function (){
+                step++
+                if (step == 1){
+                    return {value:'Hello', done: false}    
+                } else if(step == 2){
+                return {value:'World', done: false}
+                }
+                return {value: undefined, done:true}
+            }
+        }
+        return iterator
+    }
+}
+
+for (const word of obj){
+    console.log(word)
+}
+
+
+// example for string and array iterator 
+
+const called = 'Bari'
+for (const initial of called){
+    console.log(initial)
+
+}
+
+const array = [1, 2, 3, 'Derrick']
+
+for (const figure of array){
+    console.log(figure)
+}
