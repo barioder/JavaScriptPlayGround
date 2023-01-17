@@ -260,3 +260,19 @@ const array = [1, 2, 3, 'Derrick']
 for (const figure of array){
     console.log(figure)
 }
+
+//  Generators in Javascript 
+
+function* generatorFunction(){
+    yield 'First yield'
+    yield 'Second yield'
+}
+
+// a generator function always returns a generator object which is an iterator 
+const generatorObject = generatorFunction()
+for(const value of generatorObject){
+    console.log(value)
+}
+
+// Note generators are a simpler way of creating iterators 
+
