@@ -14,3 +14,12 @@ function text(name){
 }
 
 setTimeout(text, 5000, 'Derrick')
+
+// setInterval() function which runs the same code block over and over at a regular interval
+// note setInterval() keeps on counting time as the code is being executed
+
+function shoutName(){
+    console.log('Shouting Name Derrick')
+}
+// we call the setInterval () with the function duration (4 seconds in this case) as parameters
+setInterval(shoutName, 2000)
