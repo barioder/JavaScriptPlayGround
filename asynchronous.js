@@ -1,3 +1,4 @@
+// setTimeout() function
 // setTimeout() function executes a particular block of code once after a a specific 
 // time has elapsed 
 
@@ -15,11 +16,24 @@ function text(name){
 
 setTimeout(text, 5000, 'Derrick')
 
-// setInterval() function which runs the same code block over and over at a regular interval
+// setInterval() function 
+// setInterval() function runs the same code block over and over at a regular interval unless stoped
 // note setInterval() keeps on counting time as the code is being executed
+
+// how to stop a setinterval function after a specific time 
+// example below will log a message every 2 seconds and stop after 5 secs
+function notforever(){
+    console.log('I have to stop logging after 5 seconds')
+}
+
+let setIntervalid = setInterval(notforever, 2000)
+
+// stops after 5 seconds
+setTimeout(() => {clearInterval(setIntervalid); console.log('I have stopped logging here')}, 5000)
 
 function shoutName(){
     console.log('Shouting Name Derrick')
 }
 // we call the setInterval () with the function duration (4 seconds in this case) as parameters
 setInterval(shoutName, 2000)
+
