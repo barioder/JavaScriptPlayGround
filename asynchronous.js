@@ -16,6 +16,12 @@ function text(name){
 
 setTimeout(text, 5000, 'Derrick')
 
+// How to implement recursive setTimeout #this gives the same effect as setInterval()
+setTimeout(function repeat() {
+    console.log('Loging from recursive setTimeout')
+    setTimeout(repeat, 500)
+}, 500)
+
 // setInterval() function 
 // setInterval() function runs the same code block over and over at a regular interval unless stoped
 // note setInterval() keeps on counting time as the code is being executed
