@@ -43,3 +43,17 @@ function shoutName(){
 // we call the setInterval () with the function duration (4 seconds in this case) as parameters
 setInterval(shoutName, 2000)
 
+
+// CallBacks 
+// any function that is passed to another function as an argument is a callback function
+
+function married(name){
+    console.log(`${name} is a married person` )
+}
+
+function notSingle(married){
+    const person = 'Steven'
+    married(person)
+}
+
+notSingle(married)
