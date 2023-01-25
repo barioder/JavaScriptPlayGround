@@ -3,6 +3,7 @@
 // the accepted function takes in 2 callback functions resolve and reject which 
 // turn the state of the promise from pending to fulfilled or rejected respectively when called
 
+//  a resolved promise
 const promise = new Promise ((resolve, reject)=> {
 
     setTimeout(() => {
@@ -22,3 +23,21 @@ const whenResoved = (result) => {
 // if the promise status is rejected 
 
 promise.then(whenResoved)
+
+// a rejected promise 
+
+const promise2 = new Promise((resolve, reject) => {
+
+    setTimeout(()=>{
+        // reject returns the message passed into it 
+        reject('Error')
+    }, 6000)
+})
+
+const whenRejected = (error)=>{
+    console.log('This is what is run when promise2 is rejected')
+    console.log(`${error}`)
+
+}
+
+promise2.catch(whenRejected)
