@@ -41,3 +41,21 @@ const whenRejected = (error)=>{
 }
 
 promise2.catch(whenRejected)
+
+// promise static methods to read about 
+// Promise.all() 
+// if any of the promises rejects, promise.all() rejects with that error message 
+const promise1 = Promise.resolve(30);
+const promise22 = 42;
+const promise3 = new Promise ((resolve, reject)=>{
+    setTimeout(resolve, 200, 'YES');
+});
+
+// takes in an iterable of promises and returns a single promise that resolves to an array
+Promise.all([promise1, promise22, promise3]).then((result)=>{
+    console.log(result);
+});
+
+
+// Promise.settled()
+// Promise.race()
