@@ -57,5 +57,17 @@ Promise.all([promise1, promise22, promise3]).then((result)=>{
 });
 
 
-// Promise.settled()
+// Promise.allSettled()
+// promise.allSettled waits for all input promises to complete regardless of whether or not one
+//  of them is rejected
+
+const promise11 = Promise.resolve(350);
+const promise222 = 56;
+const promise233 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 300, 'Finished');
+});
+
+Promise.allSettled([promise11, promise222, promise233]).then((values) => {
+    console.log(values)
+});
 // Promise.race()
