@@ -64,10 +64,28 @@ Promise.all([promise1, promise22, promise3]).then((result)=>{
 const promise11 = Promise.resolve(350);
 const promise222 = 56;
 const promise233 = new Promise((resolve, reject) => {
-    setTimeout(resolve, 300, 'Finished');
+    setTimeout(reject, 300, 'Finished');
 });
 
 Promise.allSettled([promise11, promise222, promise233]).then((values) => {
-    console.log(values)
+    console.log(values);
 });
+
+
 // Promise.race()
+// The promise.race() method retuns a promise that fullfills or rejects earliest with
+// the value of that promise 
+
+const racePromise1 = new Promise ((resolve, reject)=>{
+    setTimeout(resolve, 500, 'takes longer');
+
+});
+
+const racePromise2 = new Promise ((resolve, reject)=>{
+    setTimeout(resolve, 400, 'takes less time');
+});
+
+
+Promise.race([racePromise1, racePromise2]).then((value)=>{
+    console.log(value);
+});
