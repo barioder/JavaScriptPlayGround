@@ -82,3 +82,37 @@ async function concurrentExe(){
 }
 
 concurrentExe()
+
+
+// Parallel Execution 
+// here individual functions are resolved with out having to wait for other functions to 
+// be resolved 
+
+function resolveHot(){
+    return new Promise (resolve => {
+        setTimeout(function (){ 
+            resolve('Hot')
+        }, 2000)
+    })
+}
+
+function resolveTea(){
+    return new Promise (resolve => { 
+        setTimeout(function (){
+            resolve('Tea')
+        },
+        1000)
+    })
+}
+
+
+function parallelExe(){
+    // Function that executes fasted is what is logged to the console with out waiting for the other
+    Promise.all([
+        (async ()=> console.log(await resolveHot()))(),
+        (async ()=> console.log(await resolveTea()))(),
+    ])
+}
+
+
+parallelExe()
