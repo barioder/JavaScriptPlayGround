@@ -68,3 +68,17 @@ async function sequentialExe(){
 
 sequentialExe()
 
+// concurrent execution 
+
+async function concurrentExe(){
+    const big1 = saysBig()
+    const move1 = saysMove()
+    // with this way saysBig and saysMove execute concurrently
+    // saysMove will not wait for saysBig to finish for it to execute but rather executed in the 
+    // backgroung and wait only to log the output after saysBig logs its result
+    // This will take 2 seconds to execute instead of 3
+    console.log(await big1, 'from concurrent Exe')
+    console.log(await move1, 'from concurrent Exe')
+}
+
+concurrentExe()
